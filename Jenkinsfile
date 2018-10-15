@@ -14,5 +14,14 @@ pipeline {
             booleanParam(name: 'PATCH_BUILD', defaultValue: true)
             choice(name: 'WLS_VERSION', choices: ['12.2.1.2.0', '12.1.3'], description: 'WLS Client Version')
     }
-
+    
+    stages {
+        stage("build") {
+            steps {
+                echo "Hello ${params.BUILD_TYPE}"
+                echo "Global ${SE_DEFAULT_BRANCH}"
+            }
+        }
+    }   
+ } 
 }
