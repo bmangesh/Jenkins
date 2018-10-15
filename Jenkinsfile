@@ -12,6 +12,7 @@ pipeline {
                 description: "Build Type")
             booleanParam(name: 'FULL_BUILD', defaultValue: false)
             booleanParam(name: 'PATCH_BUILD', defaultValue: true)
+            booleanParam(name: 'PATCH_BUILD', defaultValue: true)
             choice(name: 'WLS_VERSION', choices: ['12.2.1.2.0', '12.1.3'], description: 'WLS Client Version')
     }
     
