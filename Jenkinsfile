@@ -44,6 +44,12 @@ pipeline {
 }
 }
         
+        stage('get user name') {
+            steps {
+               echo "${BUILD_USER_ID}" 
+            }
+        }
+        
         
     }
     
