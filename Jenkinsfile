@@ -12,7 +12,7 @@ pipeline {
     parameters {
         choice(
         name: "BUILD_TYPE",
-        choices: ["snapshot", "rc"],
+        choices: ["snapshot", "rcc"],
         description: "Build Type")
     }
     stages {
