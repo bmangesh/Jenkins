@@ -4,7 +4,7 @@ pipeline {
     agent any
     triggers {
         pollSCM "H/1 * * * *"
-        cron "'* * * * * % BUILD_TYPE=rc"
+        cron "* * * * * % BUILD_TYPE=rc"
     }
     parameters {
         choice(
