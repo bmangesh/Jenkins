@@ -16,6 +16,7 @@ pipeline {
             steps {
                 sh "touch /tmp/compile.txt"
                 sh "touch /tmp/compile-2.txt"
+                sh "echo ${BUILD_TYPE}"
             }    
         }    
         
