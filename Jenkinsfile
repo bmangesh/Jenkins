@@ -27,6 +27,7 @@ pipeline {
             steps{
           //  sh 'env.BUILD_CAUSE'
             sh "echo ${env.BUILD_CAUSE}"
+                sh 'echo "${BUILD_USER}"'
             }
         }
         
