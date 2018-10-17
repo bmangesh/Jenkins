@@ -1,5 +1,6 @@
 #!/usr/bin/env groovy
-
+import jenkins.model.*
+jenkins = Jenkins.instance
 pipeline {
     agent any
     triggers {
