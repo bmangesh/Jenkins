@@ -15,6 +15,7 @@ pipeline {
         stage("Create Compile File in Tmp dir") {
             steps {
                 sh "touch /tmp/compile.txt"
+                sh "touch /tmp/compile-2.txt"
             }    
         }    
         
