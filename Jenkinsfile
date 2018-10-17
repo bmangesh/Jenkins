@@ -26,6 +26,7 @@ pipeline {
         stage ("check Build Cause") {
             steps{
             sh 'env.BUILD_CAUSE'
+            sh "${env.BUILD_CAUSE}"
             }
         }
         
