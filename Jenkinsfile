@@ -11,5 +11,13 @@ pipeline {
         choices: ["snapshot", "rc"],
         description: "Build Type")
     }
+    stages {
+        stage("Create Compile File in Tmp dir") {
+            steps {
+                sh "touch /tmp/compile.txt"
+            }    
+        }    
+        
+    }
 }    
    
