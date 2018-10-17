@@ -22,7 +22,12 @@ pipeline {
                 sh "touch /tmp/compile-2.txt"
                 sh "echo ${BUILD_TYPE}"
             }    
-        }    
+        }   
+        stage ("check Build Cause") {
+            steps{
+            sh "env.BUILD_CAUSE"
+            }
+        }
         
     }
 }    
