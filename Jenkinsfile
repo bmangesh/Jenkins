@@ -6,13 +6,13 @@ pipeline {
         pollSCM "H/1 * * * *"
         //cron "* * * * * % BUILD_TYPE=rc"
         parameterizedCron('''
-        */2 * * * * % BUILD_TYPE=nightly
+        */2 * * * * % BUILD_TYPE=rc
         ''')
     }
     parameters {
         choice(
         name: "BUILD_TYPE",
-        choices: ["snapshot", "rc", "nightly"],
+        choices: ["snapshot", "rc"],
         description: "Build Type")
     }
     stages {
