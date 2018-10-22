@@ -64,8 +64,7 @@ def getBuildCause(){
 def getBuildUser() {
     try {
     return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId()
-    }
-    catch {
+    }catch(err) {
          var = 5
         return var
     }
