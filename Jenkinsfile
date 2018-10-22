@@ -73,7 +73,8 @@ def getBuildUser() {
 return list
 
     }catch(err) {
-         triggerType = "SCM"
-        return triggerType
+         //triggerType = "SCM"
+        //return triggerType
+        err.printStackTrace()
     }
 }
