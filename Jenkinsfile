@@ -65,7 +65,7 @@ def getBuildUser() {
     try {
     return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId()
     }catch(err) {
-         triggetType = SCM
+         triggetType = "SCM"
         return triggerType
     }
 }
