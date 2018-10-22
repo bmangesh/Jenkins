@@ -62,5 +62,11 @@ def getBuildCause(){
 }
 @NonCPS
 def getBuildUser() {
+    try {
     return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId()
+    }
+    catch {
+         var = 5
+        return var
+    }
 }
