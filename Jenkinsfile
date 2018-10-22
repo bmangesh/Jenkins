@@ -67,8 +67,9 @@ def getBuildUser() {
       def causes = currentBuild.rawBuild.getCauses()
       def list 
        for(cause in causes) {
+           if(cause){
           list.add(cause.properties.shortDescription)
-             
+             }
       }
 return list
 
