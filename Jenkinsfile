@@ -6,6 +6,7 @@ triggers {
     }
     environment {
      variable_no = getBuildUser ()
+     //
       }
   stages {
     stage("Test") {
