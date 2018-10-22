@@ -75,6 +75,6 @@ return list
     }catch(err) {
          //triggerType = "SCM"
         //return triggerType
-        err.printStackTrace()
+       return  err
     }
 }
