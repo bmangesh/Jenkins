@@ -10,7 +10,6 @@ parameterizedCron('''
     environment {
      variable_no = getBuildUser ()
      var = 5
-     var2= 55
       }
   stages {
     stage("Test") {
