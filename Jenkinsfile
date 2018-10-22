@@ -62,7 +62,7 @@ def getBuildCause(){
 }
 @NonCPS
 def getBuildUser() {
-    try {
+//    try {
 //    return currentBuild.rawBuild.getCause(Cause.UserIdCause).getShortDescription()
       def causes = currentBuild.rawBuild.getCauses()
        for(cause in causes) {
@@ -70,9 +70,9 @@ def getBuildUser() {
              
       }
 return "lkj"
-  }
-    }catch(err) {
-         triggerType = "SCM"
-        return triggerType
-    }
+//  }
+//    }catch(err) {
+//         triggerType = "SCM"
+//        return triggerType
+//    }
 }
