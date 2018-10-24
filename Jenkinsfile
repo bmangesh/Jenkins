@@ -3,7 +3,7 @@ pipeline {
 triggers {
         pollSCM "H/1 * * * *"
 parameterizedCron('''
-        */2 * * * * % BUILD_TYPE=Nightly
+        */5 * * * * % BUILD_TYPE=Nightly
         ''')
                
     }
