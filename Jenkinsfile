@@ -44,6 +44,7 @@ def getBuildCause(){
             //echo "${BUILD_USER_ID}"
             //echo "${BUILD_USER_EMAIL}"
              BUILD_USER_ID = "${BUILD_USER_ID}"
+         }   
     }
 }
 @NonCPS
