@@ -92,3 +92,4 @@ PRCause   = currentBuild.rawBuild.getCause(org.jenkinsci.plugins.github.pullrequ
 println SCMCause
 println UserCause
 println PRCause
+//println PRCause
