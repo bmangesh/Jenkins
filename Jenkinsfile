@@ -39,9 +39,11 @@ parameters {
 def getBuildCause(){
 
      wrap([$class: 'BuildUser']) {
-      echo "${BUILD_USER}"
-      echo "${BUILD_USER_ID}"
-      echo "${BUILD_USER_EMAIL}"
+         script {
+            //echo "${BUILD_USER}"
+            //echo "${BUILD_USER_ID}"
+            //echo "${BUILD_USER_EMAIL}"
+             BUILD_USER_ID = "${BUILD_USER_ID}"
     }
 }
 @NonCPS
