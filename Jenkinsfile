@@ -1,7 +1,8 @@
 pipeline {
     agent any
 triggers {
-        pollSCM "H/1 * * * *"
+        pollSCM "*/1 * * * *"
+        //pollSCM('*/2 * * * *')
 parameterizedCron('''
         */10 * * * * % BUILD_TYPE=Nightly
         ''')
