@@ -65,6 +65,6 @@ def getBuildCause(){
 def getBuildUser() {
     def causes = currentBuild.rawBuild.getCauses()
    UserCause = currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause)
-    println UserCause
+    return  UserCause
 }
 
