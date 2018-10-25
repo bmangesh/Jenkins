@@ -55,7 +55,7 @@ def getBuildUser() {
         wrap([$class: 'BuildUser']) {
             script {
                 BUILD_USER_ID1 = "${BUILD_USER_ID}"
-            if( !( 'abcd' in env.AUTH_USERS ) ) 
+            if( !( ${BUILD_USER_ID1} in env.AUTH_USERS ) ) 
                 throw new Exception("You don't have permission to fire release Build ")
             }    
     }
