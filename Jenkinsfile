@@ -85,6 +85,7 @@ println causes
 
 SCMCause  = currentBuild.rawBuild.getCause(hudson.triggers.SCMTrigger$SCMTriggerCause)
 UserCause = currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause)
+PRCause   = currentBuild.rawBuild.getCause(org.jenkinsci.plugins.github.pullrequest.GitHubPRCause)
 
 
 println SCMCause
