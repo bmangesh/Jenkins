@@ -48,7 +48,7 @@ def getBuildCause(){
 def getBuildUser() {
     def causes = currentBuild.rawBuild.getCauses()
    def userCause = currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause)
-    if ( UserCause && ${env.BUILD_TYPE} == "release" ) {
+    if ( userCause && ${env.BUILD_TYPE} == "release" ) {
         wrap([$class: 'BuildUser']) {
             if( !(${BUILD_USER_ID} in ${env.AUTH_USERS}) ) 
                 throw new Exception("You don't have permission to fire release Build ")
