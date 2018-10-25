@@ -30,7 +30,7 @@ parameters {
   stages {
     stage("Test") {
         steps{
-                echo "${variable_no}"
+              //  echo "${variable_no}"
                 echo "Any code with error"
         }
     }
