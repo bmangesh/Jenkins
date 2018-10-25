@@ -79,3 +79,6 @@ return list
        return  err
     }
 }
+def causes = currentBuild.rawBuild.getCauses()
+
+println causes
