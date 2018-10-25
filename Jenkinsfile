@@ -15,7 +15,7 @@ parameterizedCron('''
 parameters {
             choice(
                 name: 'BUILD_TYPE',
-                choices:"Nightly\nSnapshot\nRelease",
+                choices:"Nightly\nSnapshot\nrelease",
                 description: "Nightly for internalodd releases - 4.1, 4.3, 4.5...! \n Release for customer/even releases - 4.0, 4.2, 4.4....")
             
             //choice(name:'BUILD_TYPE',choices:['Nightly','Snapshot','Release'], description:'Nightly for internalodd releases - 4.1, 4.3, 4.5...! \n Release for customer/even releases - 4.0, 4.2, 4.4..')
@@ -47,7 +47,7 @@ def getBuildCause(){
 @NonCPS
 def getBuildUser() {
     def causes = currentBuild.rawBuild.getCauses()
-   UserCause = currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause)
+   def userCause = currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause)
     if ( UserCause && ${env.BUILD_TYPE} == "release" ) {
         wrap([$class: 'BuildUser']) {
             if( !(${BUILD_USER_ID} in ${env.AUTH_USERS}) ) 
