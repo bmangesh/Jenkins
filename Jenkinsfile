@@ -3,7 +3,7 @@ pipeline {
 triggers {
         pollSCM "H/1 * * * *"
 parameterizedCron('''
-        */5 * * * * % BUILD_TYPE=Nightly
+        */10 * * * * % BUILD_TYPE=Nightly
         ''')
                
     }
@@ -82,3 +82,10 @@ return list
 def causes = currentBuild.rawBuild.getCauses()
 
 println causes
+
+SCMCause  = currentBuild.rawBuild.getCause(hudson.triggers.SCMTrigger$SCMTriggerCause)
+UserCause = currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause)
+
+
+println SCMCause
+println UserCause
