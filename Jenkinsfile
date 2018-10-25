@@ -63,33 +63,8 @@ def getBuildCause(){
 }
 @NonCPS
 def getBuildUser() {
-    try {
-//    return currentBuild.rawBuild.getCause(Cause.UserIdCause).getShortDescription()
-      def causes = currentBuild.rawBuild.getCauses()
-      def list = []
-       for(cause in causes) {
-           if(cause){
-          list.add(cause.properties.shortDescription)
-             }
-      }
-return list
-
-    }catch(err) {
-         //triggerType = "SCM"
-        //return triggerType
-       return  err
-    }
+    def causes = currentBuild.rawBuild.getCauses()
+   UserCause = currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause)
+    println UserCause
 }
-def causes = currentBuild.rawBuild.getCauses()
 
-println causes
-
-SCMCause  = currentBuild.rawBuild.getCause(hudson.triggers.SCMTrigger$SCMTriggerCause)
-UserCause = currentBuild.rawBuild.getCause(hudson.model.Cause$UserIdCause)
-PRCause   = currentBuild.rawBuild.getCause(org.jenkinsci.plugins.github.pullrequest.GitHubPRCause)
-
-
-println SCMCause
-println UserCause
-println PRCause
-//println PRCause
